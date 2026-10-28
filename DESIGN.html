@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF.8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+    <title>Student Design Services</title> 
+<link rel="stylesheet" href="design.css">
+</head>
+<body>
+     
+    <!--Navigation-->
+    <header>
+        <div class="logo">Student Design</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="contact">Contact</a>
+        </nav>
+    </header>
+    <!--Hero/Home Section-->
+    ,<section id="home" class="hero">
+        <h1>Design Help By Students,For Students</h1>
+        <p>Get professional help with your club logos,presatation slides,posters,and design portfolios from fellow Student creatives</p>
+        <a href="#contact"class="btn">Request a Design</a>
+    </section>
+    <!--Services Section with pictures-->
+    <section id="services"class="section">
+        <h2 class="section-titlr">What We Offer</h2>
+        <div class="services-grid">
+            
+            <!--Service 1-->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=500"alt="Logo & Branding">
+                <div class="card-content">
+                  <h3>Logo & Branding</h3>
+                  <p>Need a logo for your student organisation,hackathon,orclub? We will build your visual identity. </p>
+            </div>
+        </div>
+        <!--Service 2-->
+        <div class="card">
+            <img src="Presentations.jpg"alt="Presentations">
+            <div class="card-content">
+                <h3>Presentations</h3>
+                <p>Make your final project pitches and slide decks stand out with clean,modern layouts.</p>
+            </div>
+        </div>
+        <!--Service 3-->
+        <div class="card">
+            <img src="Posters & Print.jpg"alt="Posters & Print">
+            <div class="card-content">
+                <h3>Posters & Print</h3>
+                <p>Get eye-catching flyers and posters for campus events,art shows,or club meetings.</p>
+            </div>
+        </div>
+
+    </section>
+    <!--Contact Section-->
+    <section id="contact"class="section">
+        <h2 class="section-title">Request a Service</h2>
+        <div class="contact-form">
+            <form onsubmit="hadlesubmit(event)">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="email"id="name"
+placeholder="Sahma Miles"required>
+                </div>
+                <div class="form-group">
+                    <lable>Students Email</lable>
+                    <input type="email"id="email"
+placeholder="sahma@Varcityhub.ug" required>                   
+                </div>
+                <div class="form-group">
+                    <label>Project Description</label>
+                    <textarea id="message"rows="4"
+placeholder="Tell us what kind design help you need..." required></textarea>                   
+                </div>
+                <button type="submit"class="btn"style="width:100%;
+cursor:pointer,">Submit Request</button>
+            </form>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <p>&copy;2026 Student Design Services.All rights reserved.</p>
+    </footer>
+    <!--Simple JavaScript for the form-->
+    <script>
+        function handleSubmit(event){
+            //Stops the page from actually refreshing event.preventDefault();
+
+            //Get the users name the input box let userName=document.getElementById("name").value;
+
+
+            //Show a success message popup alert ("Thanks," +userName +"!Your request has been sent. We will email you in 24 hours.");
+
+            //Clear the form event.target.reset();
+        }
+    </script>
+
+</body>
+</html>

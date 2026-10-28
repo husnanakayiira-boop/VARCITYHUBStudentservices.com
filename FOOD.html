@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Varsity Hub | Student Food Services</title>
+
+    <style>
+        /* Minimal CSS styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #243047;
+            background: #f6f8fb;
+            line-height: 1.5;
+        }
+
+        header, footer {
+            background: #123b2a;
+            color: white;
+            padding: 1rem 6%;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 1.5rem;
+        }
+
+        .hero {
+            background: #e4f2e9;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        section {
+            margin: 1.5rem 0;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .food-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .food-card{
+            background: white;
+            width: 260px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .food-card img{
+            width: 100%;
+            height: 170px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .meal {
+            background: white;
+            border: 1px solid #dce3e8;
+            border-radius: 8px;
+            padding: 1rem;
+            flex: 1 1 220px;
+        }
+
+        .price {
+            color: #176b42;
+            font-weight: bold;
+        }
+
+        button {
+            background: #176b42;
+            color: white;
+            border: 0;
+            padding: .65rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input, select, textarea {
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: .6rem;
+            margin: .25rem 0 .75rem;
+            border: 1px solid #bdc8d0;
+            border-radius: 4px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-row {
+            margin-bottom: .5rem;
+        }
+
+        a {
+            color: #176b42;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: .25rem .5rem .25rem 0;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header>
+        <h1>Varsity Hub</h1>
+        <p>Student Services · Food & Dining</p>
+
+        <nav aria-label="Main navigation">
+            <a href="#menu">Food Menu</a>
+            <a href="#order">Place an Order</a>
+            <a href="#hours">Opening Hours</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Welcome section -->
+        <section class="hero">
+            <img src="fresh.jpeg"alt="fresh food"
+            width="200"
+            height="140">
+
+            <h2>Good food. Student-friendly prices.</h2>
+
+            <p>
+                Welcome to Varsity Hub Student Services.
+                Explore today's food options, choose your meal,
+                and send an order request.
+            </p>
+
+            <p>
+                <a href="#menu">Browse the menu</a>
+                or
+                <a href="#order">order a meal</a>.
+            </p>
+        </section>
+
+        <!-- Food menu -->
+        <section id="menu">
+
+            <h2>Our Food Menu</h2>
+
+            <p>
+                Sample menu — update meal names and prices to match
+                your cafeteria's actual offerings.
+            </p>
+
+            <div class="menu">
+
+                <article class="meal">
+                    <img src="cofee.jpg"alt="breakfast combo"
+                         width="200"
+                         height="140">
+
+                    <h3>Breakfast Combo</h3>
+                    <p>Tea or coffee with a chapati and an egg.</p>
+                    <p class="price">UGX 5,000</p>
+                    <button type="button"
+                        onclick="chooseMeal('Breakfast Combo')">
+                        Choose meal
+                    </button>
+                </article>
+
+
+                <article class="meal">
+                    <img src="bean stew.png"alt="rice and beans"
+                         width="200"
+                         height="140">
+
+
+                    <h3>Rice & Beans</h3>
+                    <p>A filling lunch served with vegetables.</p>
+                    <p class="price">UGX 7,000</p>
+                    <button type="button"
+                        onclick="chooseMeal('Rice & Beans')">
+                        Choose meal
+                    </button>
+                </article>
+
+
+
+                <article class="meal">
+                    <img src="chicken.jpg"alt="chicken and chips"
+                         width="200"
+                         height="140">
+
+                    <h3>Chicken & Chips</h3>
+                    <p>Chicken served with crispy chips.</p>
+                    <p class="price">UGX 12,000</p>
+                    <button type="button"
+                        onclick="chooseMeal('Chicken & Chips')">
+                        Choose meal
+                    </button>
+                </article>
+
+                <article class="meal">
+                    <img src="vegetable.jpg"alt="vegetable rice"
+                         width="200"
+                         height="140">
+
+                    <h3>Vegetable Pilau</h3>
+                    <p>Seasoned rice with vegetables.</p>
+                    <p class="price">UGX 8,000</p>
+                    <button type="button"
+                        onclick="chooseMeal('Vegetable Pilau')">
+                        Choose meal
+                    </button>
+                </article>
+
+                <article class="meal">
+                    <img src="juice.jpg"alt="fresh juice"
+                         width="200"
+                         height="140">
+
+                    <h3>Fresh Juice</h3>
+                    <p>A refreshing seasonal fruit juice.</p>
+                    <p class="price">UGX 3,000</p>
+                    <button type="button"
+                        onclick="chooseMeal('Fresh Juice')">
+                        Choose meal
+                    </button>
+                </article>
+
+                <article class="meal">
+                    <img src="snack.jpg"alt="snack of the day"
+                         width="200"
+                         height="140">
+
+                    <h3>Snack of the Day</h3>
+                    <p>Ask the service desk for today's snack.</p>
+                    <p class="price">From UGX 2,000</p>
+                    <button type="button"
+                        onclick="chooseMeal('Snack of the Day')">
+                        Choose meal
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Food order form -->
+        <section id="order">
+            <h2>Place a Food Order</h2>
+
+            <p>
+                Fill in your details to prepare a food order request.
+            </p>
+
+            <form id="orderForm">
+
+                <div class="form-row">
+                    <label for="studentName">Student name</label>
+                    <input
+                        id="studentName"
+                        name="studentName"
+                        type="text"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <label for="studentId">Student ID</label>
+                    <input
+                        id="studentId"
+                        name="studentId"
+                        type="text"
+                        placeholder="Enter your student ID"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <label for="mealChoice">Choose a meal</label>
+
+                    <select id="mealChoice"
+                        name="mealChoice" required>
+
+                        <option value="">-- Select a meal --</option>
+                        <option>Breakfast Combo</option>
+                        <option>Rice & Beans</option>
+                        <option>Chicken & Chips</option>
+                        <option>Vegetable Pilau</option>
+                        <option>Fresh Juice</option>
+                        <option>Snack of the Day</option>
+
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="quantity">Quantity</label>
+                    <input
+                        id="quantity"
+                        name="quantity"
+                        type="number"
+                        min="1"
+                        value="1"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <label for="pickupTime">
+                        Preferred pickup time
+                    </label>
+
+                    <input
+                        id="pickupTime"
+                        name="pickupTime"
+                        type="time"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <label for="notes">
+                        Special requests (optional)
+                    </label>
+
+                    <textarea
+                        id="notes"
+                        name="notes"
+                        rows="3"
+                        placeholder="Allergies or meal preferences">
+                    </textarea>
+                </div>
+
+                <button type="submit">Review Order</button>
+
+            </form>
+
+            <div id="orderSummary" aria-live="polite"></div>
+        </section>
+
+        <!-- Opening hours -->
+        <section id="hours">
+            <h2>Opening Hours</h2>
+
+            <ul>
+                <li>Breakfast: 7:00 AM – 10:00 AM</li>
+                <li>Lunch: 12:00 PM – 3:00 PM</li>
+                <li>Snacks and drinks: 8:00 AM – 6:00 PM</li>
+            </ul>
+
+            <p>
+                Note: Those are hours we work within
+                the official Varsity Hub schedule.
+            </p>
+        </section>
+
+        <!-- Contact information -->
+        <section id="contact">
+            <h2>Need Help?</h2>
+
+            <p>
+                For menu questions, dietary needs, or order assistance,
+                visit the Varsity Hub Student Services food counter.
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:foodservices@example.com">
+                    foodservices@example.com
+                </a>
+            
+            </p>
+
+            <p>
+                Location: Namugoona MIU
+                
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer>
+        <p>
+            &copy; 2026 Varsity Hub Student Services · Food Services
+        </p>
+
+        <p>
+            Designed for students to browse meals and prepare
+            food order requests.
+        </p>
+    </footer>
+
+    <!-- JavaScript interactions -->
+    <script>
+        // Select a meal and move to the order form.
+        function chooseMeal(meal) {
+            document.getElementById("mealChoice").value = meal;
+
+            document.getElementById("order").scrollIntoView({
+                behavior: "smooth"
+            });
+
+            document.getElementById("studentName").focus({
+                preventScroll: true
+            });
+        }
+
+        // Preview the order without sending it to a server.
+        document.getElementById("orderForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("studentName").value.trim();
+
+                const studentId =
+                    document.getElementById("studentId").value.trim();
+
+                const meal =
+                    document.getElementById("mealChoice").value;
+
+                const quantity =
+                    document.getElementById("quantity").value;
+
+                const pickupTime =
+                    document.getElementById("pickupTime").value;
+
+                const notes =
+                    document.getElementById("notes").value.trim();
+
+                const summary =
+                    document.getElementById("orderSummary");
+
+                // Clear any previous preview.
+                summary.innerHTML = "";
+
+                const heading = document.createElement("h3");
+                heading.textContent = "Order Request Preview";
+
+                const details = document.createElement("p");
+
+                details.textContent =
+                    `Student: ${name} | ID: ${studentId} | ` +
+                    `Meal: ${meal} | Quantity: ${quantity} | ` +
+                    `Pickup: ${pickupTime}`;
+
+                const extra = document.createElement("p");
+
+                extra.textContent = notes
+                    ? `Special requests: ${notes}`
+                    : "No special requests added.";
+
+                const notice = document.createElement("p");
+
+                notice.textContent =
+                    "This is only a preview. Your request has " +
+                    "not been sent or paid for.";
+
+                summary.append(
+                    heading,
+                    details,
+                    extra,
+                    notice
+                );
+            });
+    </script>
+
+</body>
+</html>

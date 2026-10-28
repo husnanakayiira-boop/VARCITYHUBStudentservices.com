@@ -1,0 +1,43 @@
+  *{box-sizing: border-box;margin: 0;padding: 0;font-family: 'Segoe UI', sans-serif;}
+        body{background: #f4f7f6;color: #333;}
+
+        /*Navigation*/
+        nav{background: #2c3e50;color: white;padding: 20px;text-align: center;}
+
+        /*Hero*/
+        .hero{text-align: center;padding: 60px 20px;background: white;}
+
+        /*Services Grid*/
+        .services-grid{
+            display: grid;
+            grid-template-columns: repeat(auto fit,minmax(280px,1fr));
+            gap: 20px;
+            max-width: 60px;
+        }
+
+        .card{
+            background: white;
+            border-radius: 8px;
+    
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            overflow: hidden;/*Keeps the picture nicely rounded inside the card*/
+        }
+        .card:hover{transform: scale(1.05);}
+        .card img {width: 50%;height: 50px;object-fit:contain;/*Make sure the image fills the space without stretching
+        }
+        .card-content{
+            text-align: center;
+            padding: 20px;}
+
+        .card h3{color: #2563eb;
+        margin-top: 0;}
+
+        /*Footer*/
+        footer{
+            text-align: center;
+            padding: 20px;
+            background-color: #1f2937;
+            color: #f4f7f6;
+            margin-top: 40px;
+        }
