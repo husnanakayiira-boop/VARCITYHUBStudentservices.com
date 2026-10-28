@@ -1,0 +1,77 @@
+
+<style>
+body
+ {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f6f9;
+        color: #333;
+    }
+
+    header {
+        background-color: #123c69;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #0b2545;
+        padding: 12px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 12px;
+    }
+
+    .welcome {
+        text-align: center;
+        padding: 35px 15px;
+        background-color: white;
+    }
+
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .service-card {
+        background-color: white;
+        width: 230px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px #ccc;
+    }
+
+    .service-card h2 {
+        color: #123c69;
+    }
+
+    .service-card a {
+        display: inline-block;
+        background-color: #123c69;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .service-card a:hover {
+        background-color: #2874a6;
+    }
+
+    footer {
+        background-color: #0b2545;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+</style>
